@@ -29,25 +29,37 @@ input[type=radio] {
     background-image:url("../images/bg-mobile-light.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
+    padding-top: 20px;
 }
 
 .todo-toggle{
+    max-width:18rem;
     color:#fff;
     display:flex;
     justify-content: space-between;
-    margin:0 auto;
+    align-items: center;
+    margin:0 auto ;
+    position:relative;
+    top:10px;
 }
 
-.add-todo{
-    margin-top:50px;
+.moon{
+    font-size: 2rem;
+}
+
+.top-card{
+    position: relative;
+    top:30px;
 }
 
 
 .all-todos{
     margin-top:20px;
+    position:relative;
+    bottom:50px;
 }
 
-/* centering the todoitems container */
+/* centering the todoitems card */
 .card{
     margin:0 auto;
     max-width:18rem;
