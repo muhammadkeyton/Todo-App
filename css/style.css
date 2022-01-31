@@ -1,13 +1,12 @@
-*{
-    box-sizing: border-box;
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
-body{
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-p{
-    margin:0;
+h1 {
+    font-weight: var(--font-weight--bold);
+    font-size: var(--step-2);
 }
 
 /* removing input border and changing the size of the radio button */
