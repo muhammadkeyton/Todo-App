@@ -61,9 +61,9 @@ input[type=radio] {
 
 /* centering the todoitems card */
 .card{
-    margin:0 auto;
+    margin:0 auto ;
     max-width:18rem;
-    border-radius: 5px;
+    border-radius: unset;
 }
 
 .card-body{
@@ -71,6 +71,26 @@ input[type=radio] {
 }
 
 /* centering the  create new to do form */
+
+
+.todo-card:first-child{
+    border-radius:5px 5px 0 0;
+}
+
+.todo-card:last-child{
+    border-radius:0 0 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .create-new-todo{
     margin:0 auto 0;
     max-width:18rem;
@@ -80,6 +100,7 @@ input[type=radio] {
 .todo-item{
     display:flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .new-todo{
@@ -88,4 +109,16 @@ input[type=radio] {
 
 .item{
     margin-left:5px;  
+}
+
+
+/* bottom card */
+.bottom-card-items{
+    display:flex;
+    justify-content: space-between;
+}
+
+.explanation{
+    margin:20px 0;
+    text-align: center;
 }
