@@ -1,0 +1,59 @@
+/* 
+    Defines site wide css variables. Below is an example on how to use them
+    div {
+        font-family: var(--font-family);
+    } 
+*/
+:root {
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-weight--normal: 400;
+    --font-weight--bold: 700;
+}
+
+
+/* 
+    Defines responsive font sizes. For more information visit:focus-visible
+    https://utopia.fyi/type/calculator/ 
+*/
+:root {
+    --step--2: clamp(0.69rem, 0.60rem + 0.49vw, 1.04rem);
+    --step--1: clamp(0.83rem, 0.70rem + 0.67vw, 1.30rem);
+    --step-0: clamp(1.00rem, 0.82rem + 0.89vw, 1.63rem);
+    --step-1: clamp(1.20rem, 0.96rem + 1.19vw, 2.03rem);
+    --step-2: clamp(1.44rem, 1.13rem + 1.57vw, 2.54rem);
+    --step-3: clamp(1.73rem, 1.32rem + 2.07vw, 3.17rem);
+    --step-4: clamp(2.07rem, 1.53rem + 2.71vw, 3.97rem);
+    --step-5: clamp(2.49rem, 1.78rem + 3.53vw, 4.96rem);
+}
+
+
+/*
+    Primary theme
+*/
+:root {
+    --font-color: #494C6B;
+    --font-color--secondary: #9495A5;
+    --todo-input-color--active: #393A4B;
+    --todo-input-color--inactive: #9495A5;
+    --todo-color--completed: #D1D2DA;
+    --background-color: #FAFAFA;
+    --background-color--table: #FFFFFF;
+    --table-color--border: #979797;
+    --table-color--divider: #E3E4F1;
+}
+
+/*
+    Dark theme
+    refer to this for reference: https://blog.logrocket.com/a-guide-to-theming-in-css/
+*/
+[data-theme="dark"] {
+    --font-color: #C8CBE7;
+    --font-color--secondary: #5B5E7E;
+    --todo-input-color--active: #C8CBE7;
+    --todo-input-color--inactive: #767992;
+    --todo-color--completed: #4D5067;
+    --background-color: #171823;
+    --background-color--table: #FFFFFF;
+    --table-color--border: #25273D;
+    --table-color--divider: #393A4B;
+}
