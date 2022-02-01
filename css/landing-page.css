@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Josefin Sans;
+  text-align: right;
+  background-image: url(../images/landing-page/landing-img.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  padding: 100px;
+}
+
+.main {
+  font-weight: bolder;
+  margin: 50px 0 70px 0;
+  font-size: 22px;
+  color: hsl(0, 0%, 100%);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d300e6,
+      0 0 40px #e600c0, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+p {
+  font-weight: bolder;
+  margin-bottom: 60px;
+  font-size: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+button {
+  background-color: hsl(0, 0%, 0%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  border: transparent;
+  margin-top: 10px 50px 0 0;
+  transition: all 0.5s;
+  width: 200px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: hsl(182, 82%, 32%);
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
