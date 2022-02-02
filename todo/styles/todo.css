@@ -42,10 +42,6 @@ input[type=radio] {
     top:10px;
 }
 
-.moon{
-    font-size: 2rem;
-}
-
 .top-card{
     position: relative;
     top:30px;
@@ -61,12 +57,14 @@ input[type=radio] {
 /* centering the todoitems card */
 .card{
     margin:0 auto ;
-    max-width:18rem;
+    max-width: 18rem;
     border-radius: unset;
+    border-color: var(--table-color--border);
 }
 
 .card-body{
     padding:10px 7px;
+    background-color: var(--background-color--table);
 }
 
 /* centering the  create new to do form */
@@ -80,8 +78,15 @@ input[type=radio] {
     border-radius:0 0 5px 5px;
 }
 
+button.theme-button {
+    border: none;
+    background: transparent;
+}
 
-
+/* Used in theme-toggler.js to display the sun and moon icons */
+.display-none {
+    display: none;
+}
 
 
 
@@ -93,6 +98,10 @@ input[type=radio] {
 .create-new-todo{
     margin:0 auto 0;
     max-width:18rem;
+}
+
+.create-new-todo > input[type="text"] {
+    background-color: inherit;
 }
 
 /* todo items */

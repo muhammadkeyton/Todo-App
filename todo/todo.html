@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
   <title>Frontend Mentor | Todo app</title>
 
 
@@ -23,88 +23,40 @@
   <link rel="stylesheet" href="styles/css-reset.css">
   <link rel="stylesheet" href="styles/variables.css">
   <link rel="stylesheet" href="styles/todo.css">
-
-  <!-- scripts -->
-  <script src="./scripts/todo.js"></script>
-
 </head>
 <body>
   <section class="top-section">
     
     <div class="todo-toggle">
       <h1>TODO</h1>
-      <div class="light-dark-mode">
-        <i class="moon fas fa-moon"></i>
-      </div>
+      <button class="theme-button">
+        <img id="dark-theme" src="../images/icon-moon.svg" alt="toggle dark mode">
+        <img id="light-theme" class="display-none" src="../images/icon-sun.svg" alt="toggle light mode">
+      </button>
     </div>
-
     <div class="top-card card">
       <div class="card-body">
-
         <form class="todo-item create-new-todo" action="" >
-
           <input type="radio">
           <input type="text" id="input" placeholder="add a to-do">
         </form>
-        
       </div>
     </div>
-      
   </section>
- 
   <main>
-
     <section class="all-todos">
-    
-    <ul id="list">
-      
-      <div class="card">
-        <div class="card-body">
-
-          <div class="todo-item">
-            <input type="radio">
-            <p class="item">something here</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-
-          <div class="todo-item">
-            <input type="radio">
-            <p class="item">something here</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-
-          <div class="todo-item">
-            <input type="radio">
-            <p class="item">something here</p>
-
-          </div>
-        </div>
-      </div>
-
       <div class="card">
         <div class="card-body">
           <div class="todo-item">
             <input type="radio">
-            <p class="item">something here</p>
-
+            <p class="item">Lorem, ipsum dolor.</p>
           </div>
         </div>
       </div>
-
-      </ul>
-
     </section>
-
   </main>
 </body>
+<!-- scripts -->
+<script src="./scripts/theme-toggle.js"></script>
+<script src="./scripts/todo.js"></script>
 </html>
