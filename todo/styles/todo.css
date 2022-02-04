@@ -21,18 +21,41 @@ input[type=radio] {
 }
 
 
-/* working on top section adding the background image to the top section */
+
+/* putting a line through the checked item */
+input:checked+.item {
+    text-decoration: line-through;
+    text-decoration-color:red;
+}
+
+
+/* working on top section adding the background image to the top section and changing background image depending on the current theme */
+
+
 .top-section{
     width:100%;
-    height:12rem;
+    height:15rem;
     background-image:url("../../images/bg-mobile-light.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
-    padding-top: 20px;
+    padding:40px 20px 0;
 }
 
+
+/* this is applied when current theme is dark */
+.top-section-dark-theme{
+    width:100%;
+    height:15rem;
+    background-image:url("../../images/bg-mobile-dark.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding:40px 20px 0;
+
+}
+
+
 .todo-toggle{
-    max-width:18rem;
+    max-width:25rem;
     color:#fff;
     display:flex;
     justify-content: space-between;
@@ -52,12 +75,13 @@ input[type=radio] {
     margin-top:20px;
     position:relative;
     bottom:50px;
+    padding:0 20px;
 }
 
 /* centering the todoitems card */
 .card{
     margin:0 auto ;
-    max-width: 18rem;
+    max-width: 25rem;
     border-radius: unset;
     border-color: var(--table-color--border);
 }
@@ -89,12 +113,6 @@ button.theme-button {
 }
 
 
-
-
-
-
-
-
 .create-new-todo{
     margin:0 auto 0;
     max-width:18rem;
@@ -108,7 +126,7 @@ button.theme-button {
 .todo-item{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:flex-start;
 }
 
 .new-todo{
