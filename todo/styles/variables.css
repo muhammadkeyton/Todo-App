@@ -31,6 +31,7 @@
     Primary theme
 */
 :root {
+    --default-color-light: #000;
     --font-color: #494C6B;
     --font-color--secondary: #9495A5;
     --todo-input-color--active: #393A4B;
@@ -47,6 +48,7 @@
     refer to this for reference: https://blog.logrocket.com/a-guide-to-theming-in-css/
 */
 [data-theme="dark"] {
+    --default-color-light: #fff;
     --font-color: #C8CBE7;
     --font-color--secondary: #5B5E7E;
     --todo-input-color--active: #C8CBE7;

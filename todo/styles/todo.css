@@ -88,13 +88,6 @@ button.theme-button {
     display: none;
 }
 
-
-
-
-
-
-
-
 .create-new-todo{
     margin:0 auto 0;
     max-width:18rem;
@@ -111,6 +104,10 @@ button.theme-button {
     justify-content: space-around;
 }
 
+.todo-item input {
+    color: var(--default-color-light);
+}
+
 .new-todo{
     margin-left:5px;
 }
@@ -118,7 +115,6 @@ button.theme-button {
 .item{
     margin-left:5px;  
 }
-
 
 /* bottom card */
 .bottom-card-items{
