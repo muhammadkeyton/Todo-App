@@ -20,6 +20,9 @@ input[type=radio] {
     height: 1em;
 }
 
+input:-internal-autofill-selected {
+    background-color: var(--background-color--table);
+}
 
 /* working on top section adding the background image to the top section */
 .top-section{
