@@ -104,7 +104,7 @@ button.theme-button {
 .todo-item{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .todo-item input {
@@ -128,4 +128,24 @@ button.theme-button {
 .explanation{
     margin:20px 0;
     text-align: center;
+}
+
+/* all todos hide */
+.all-todos.hide {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* cards */
+.top-card .card-body {
+    border-radius: 5px;
+}
+
+.all-todos .card-body {
+    border-top: 1px solid rgb(221, 211, 211);
+}
+
+/* toggle */
+.toggle {
 }
