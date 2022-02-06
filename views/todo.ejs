@@ -1,0 +1,60 @@
+<%- include('partials/header'); -%>
+
+<body>
+  <section class="top-section">
+
+    <div class="todo-toggle">
+      <h1>TODO</h1>
+      <button class="theme-button">
+        <img id="dark-theme" src="../images/icon-moon.svg" alt="toggle dark mode">
+        <img id="light-theme" class="display-none" src="../images/icon-sun.svg" alt="toggle light mode">
+      </button>
+    </div>
+
+    <div class="top-card card">
+      <div class="card-body">
+        <form class="todo-item create-new-todo" action="/todo-home" method="post">
+          <input type="radio" onchange='this.form.submit();'>
+          <input type="text" id="input" placeholder="Hey <%= name %>" name="newListItem">
+          <input type="hidden" name="listtype" value="<%= listType %>"/>
+        </form>
+      </div>
+    </div>
+
+
+  </section>
+  <main>
+    <section class="all-todos">
+
+      <% if(allTodos){%>
+        <% allTodos.forEach((todo)=>{%>
+        <form action="/delete" method="post">
+          <div class="card">
+            <div class="card-body">
+              <div class="todo-item">
+                <input type="radio" onchange='this.form.submit();'>
+                <p class="item"><%= todo.listItem %></p>
+                <input type="hidden" name="todoID" value="<%= todo.id %>"/>
+                <input type="hidden" name="listtype" value="<%= listType %>"/>
+              </div>
+            </div>
+          </div>
+          </form>
+
+        <%})%>
+
+      <%}%>
+
+
+
+
+
+    </section>
+
+    <p style="text-align:center;"><%= listType %> List</p>
+  </main>
+</body>
+<!-- scripts -->
+<script src="../todo/scripts/theme-toggle.js"></script>
+<script src="../todo/scripts/todo.js"></script>
+</html>
