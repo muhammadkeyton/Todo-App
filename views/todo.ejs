@@ -15,7 +15,8 @@
       <div class="card-body">
         <form class="todo-item create-new-todo" action="/todo-home" method="post">
           <input type="radio" onchange='this.form.submit();'>
-          <input type="text" id="input" placeholder="Hey <%= name %>" name="newListItem">
+
+          <input type="text" id="input" placeholder="Hey <%= currentUser.username.split(" ")[0]; %>" name="newListItem" autocomplete="off">
           <input type="hidden" name="listtype" value="<%= listType %>"/>
         </form>
       </div>
@@ -26,7 +27,7 @@
   <main>
     <section class="all-todos">
 
-      <% if(allTodos){%>
+      <% if (listType === "Main"){%>
         <% allTodos.forEach((todo)=>{%>
         <form action="/delete" method="post">
           <div class="card">
@@ -43,7 +44,44 @@
 
         <%})%>
 
+      <%}else{%>
+
+        <% currentUser.otherListItems.forEach((otherList,otherIndex)=>{%>
+
+          <% if(otherList.name === listType){%>
+
+
+
+            <%otherList.listItems.forEach((listItem,index)=>{%>
+
+            <form action="/delete" method="post">
+              <div class="card">
+                <div class="card-body">
+                  <div class="todo-item">
+                    <input type="radio" onchange='this.form.submit();'>
+                    <p class="item"><%= listItem.listItem %></p>
+                    <input type="hidden" name="todoID" value="<%= listItem.id %>"/>
+                    <input type="hidden" name="listtype" value="<%= listType %>"/>
+                  </div>
+                </div>
+              </div>
+              </form>
+
+              <%})%>
+
+          <%}%>
+
+
+
+
+        <%})%>
+
+
       <%}%>
+
+
+
+
 
 
 
@@ -52,7 +90,13 @@
     </section>
 
     <p style="text-align:center;"><%= listType %> List</p>
+
+    <div class="log-out-container">
+      <a href="log-out" type="button" class="log-out btn btn-outline-danger">Log out</a>
+    </div>
+
   </main>
+
 </body>
 <!-- scripts -->
 <script src="../todo/scripts/theme-toggle.js"></script>

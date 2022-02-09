@@ -80,11 +80,11 @@ p {
   color: hsl(0, 0%, 100%);
 }
 
-button {
+.btn{
   background-color: hsl(0, 0%, 0%);
   color: #fff;
   border-radius: 16px;
-  padding: 12px;
+  padding:12px 20px;
   border: transparent;
   margin-top: 10px 50px 0 0;
   transition: all 0.5s;
@@ -95,7 +95,7 @@ a {
   text-decoration: none;
 }
 
-button:hover {
+.btn:hover {
   background-color: hsl(182, 82%, 32%);
   color: hsl(0, 0%, 0%);
   cursor: pointer;
