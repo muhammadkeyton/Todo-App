@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../login-page/login-styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <title>Frontend Mentor | Todo app</title>
 
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-card">
+
+        <form action="<%= postRoute %>" method="post">
+          <h1><%= postMethod %> with credentials</h1>
+          <% if (errMessage.length > 2){%>
+            <p style="color:red;"><%= errMessage %></p>
+          <%}%>
+          <div class="login-details">
+            <p>Username</p>
+            <input type="text" name="username" autocomplete="off" autofocus/>
+            <p>Password</p>
+            <input type="text" name="password" autocomplete="off"/>
+          </div>
+          <button type="submit"><%= postMethod %></button>
+
+
+        </form>
+
+
+
+
+      </div>
+
+
+    </div>
+    <% if(postMethod === "sign in"){%>
+        <h4 style="color:#fff;margin:20px 0 10px;" class="sign-up">Don't have an account? <a href="sign-up">Sign Up</a></h4>
+    <%}%>
+
+  </body>
+</html>
